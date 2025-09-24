@@ -25,8 +25,10 @@ To run tests:
 mvn test
 ```
 ## Project Structure
+```text
 Ecommerce-checkout-automation/
 ├── src/main/java/pages/        # Page Objects and Utilities
 └── src/test/java/              # TestNG test classes
 ├── pom.xml                     # Maven dependencies
 ├── screenshots                 # Includes Screenshots of successfull test results
+```
