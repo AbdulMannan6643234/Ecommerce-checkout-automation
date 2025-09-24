@@ -64,7 +64,7 @@ Attempting to send a blank message to support.
 Attempting to contact support without selecting a subject.
 
 ### Checkout
-![Successful Checkout Flow](/screenshots/SuccessfulCheckoutFlow)
+![Successful Checkout Flow](/screenshots/SuccessfulCheckoutFlow.png)
 Automating a Successful Checkout Flow.
 
 ![Attempting CHeckout with wrong credentials](/screenshots/CheckoutTestWithWrongCredentials.png)
