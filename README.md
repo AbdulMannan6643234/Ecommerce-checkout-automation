@@ -1,5 +1,5 @@
 # Ecommerce-Checkout-Flow
-Automated tested framework for an e-commerce application on the **checkout process**, as well as **login** and **signup flows**.
+Automated testing framework for an e-commerce application on the **checkout process**, as well as **login** and **signup flows**.
 
 ## Features
 - Automated tests for:
@@ -11,11 +11,11 @@ Automated tested framework for an e-commerce application on the **checkout proce
 - Generates TestNG reports after each run
 ## Tech Stack
 Ensure you have the following installed:
-- Language: Java, JavaScript
+- Language: Java, JavaScript (used for scripting in selenium)
 - Automation: Selenium WebDriver
 - Test Framework: TestNG
 - Build Tool: Maven
-- Version Control: Git & Github
+- Version Control: Git & GitHub
 ## Installation
 Clone the repositories and install dependencies:
 ```bash
@@ -34,11 +34,11 @@ Ecommerce-checkout-automation/
 ├── src/main/java/pages/        # Page Objects and Utilities
 └── src/test/java/              # TestNG test classes
 ├── pom.xml                     # Maven dependencies
-├── screenshots                 # Includes Screenshots of successfull test results
+├── screenshots                 # Includes Screenshots of successful test results
 ```
 ## Future Improvements:
 - Expanding TestNG usage (data-driven testing, parallel execution)
-- Integrating advancced reporting tools (Allure, ExtentReports)
+- Integrating advanced reporting tools (Allure, ExtentReports)
 - Exploring API testing with RestAssured
 - CI/CD integration for continuous testing
 # Screenshots / Reports
@@ -65,13 +65,13 @@ Attempting to contact support without selecting a subject.
 
 ### Checkout
 ![Successful Checkout Flow](/screenshots/SuccessfulCheckoutFlow.png)
-Automating a Successful Checkout Flow.
+Successful Checkout Validation.
 
 ![Attempting CHeckout with wrong credentials](/screenshots/CheckoutTestWithWrongCredentials.png)
-Automating a Checkout flow with wrong login creds.
+Checkout Validation with wrong login creds.
 
 ![Attempting Checkout with incomplete credentials](/screenshots/CheckoutTestWithIncompleteCredentials.png)
-Automating a checkout flow with incomplete signup credentials.
+Checkout Validation with incomplete SignUp details.
 
 ![Attempting Checkout Without Adding Address](/screenshots/CheckoutTestWithoutAddress.png)
-Automating checkout flow without specifying address.
+Checkout Validation without specifying address.
