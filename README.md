@@ -45,23 +45,33 @@ Ecommerce-checkout-automation/
 ### SignUp
 ![Successful Signup Flow](/screenshots/SuccessfulSignUpTest.png)
 Testing a Successful SignUp Flow.
+
 ![SignUp Test With Blank Fields](/screenshots/SignUpTestWithEmptyFields.png)
 Testing a SignUp flow failure without any data in the fields.
+
 ![Shorter Password than required](/screenshots/SignUpTestWithShortPassword.png)
 Testing a SignUp flow with a password that is shorter than the required length.
+
 ### Contacting Support
 ![Successfully Sending a Message](/screenshots/SuccessfulContactTest.png)
 Successfully sending an automated message to support.
+
 ![Attempting a Blank Message](/screenshots/ContactTestWithEmptyMessage.png)
 Attempting to send a blank message to support.
+
 ![Attempting Contact Without Selecting a Subject](/screenshots/ContactTestWithoutSelectingSubject.png)
+
 Attempting to contact support without selecting a subject.
+
 ### Checkout
 ![Successful Checkout Flow](/screenshots/SuccessfulCheckoutFlow)
 Automating a Successful Checkout Flow.
+
 ![Attempting CHeckout with wrong credentials](/screenshots/CheckoutTestWithWrongCredentials.png)
 Automating a Checkout flow with wrong login creds.
+
 ![Attempting Checkout with incomplete credentials](/screenshots/CheckoutTestWithIncompleteCredentials.png)
 Automating a checkout flow with incomplete signup credentials.
+
 ![Attempting Checkout Without Adding Address](/screenshots/CheckoutTestWithoutAddress.png)
 Automating checkout flow without specifying address.
