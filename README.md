@@ -43,7 +43,7 @@ Ecommerce-checkout-automation/
 - CI/CD integration for continuous testing
 # Screenshots / Reports
 ### SignUp
-![Successful Signup Flow](/screenshots/SuccessfulSignUpTest.png)
+![Successful Signup Flow](/screenshots/SuccesfulSignUpTest.png)
 Testing a Successful SignUp Flow.
 
 ![SignUp Test With Blank Fields](/screenshots/SignUpTestWithEmptyFields.png)
