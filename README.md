@@ -2,16 +2,20 @@
 Automated tested framework for an e-commerce application on the **checkout process**, as well as **login** and **signup flows**.
 
 ## Features
-- Validate end-to-end **checkout flows**, including cart updates, payment processing, and order confirmation.
-- Tests **user authentication**, login and signup functionalities.
-- Modular design for **easy maintenance**: update selectors or test data in one place (centralised locators).
-- Provides **detailed test reports** for each run.
-- Tests **incomplete fields** and **failure scenarios** for validation of the **error messages**.
+- Automated tests for:
+        - Checkout flow: cart updates, payment, order confirmation
+        - User authentication: login and signup
+        - Negative cases: incomplete fields, invalid inputs, error validation
+- Page Object Model (POM) for maintainable test structure
+- Centralized locators and test data for easier updates
+- Generates TestNG reports after each run
 ## Tech Stack
 Ensure you have the following installed:
 - Language: Java, JavaScript
-- Testing Framework: Selenium
-- Other Tools: TestNG
+- Automation: Selenium WebDriver
+- Test Framework: TestNG
+- Build Tool: Maven
+- Version Control: Git & Github
 ## Installation
 Clone the repositories and install dependencies:
 ```bash
