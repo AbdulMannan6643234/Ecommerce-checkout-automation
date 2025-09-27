@@ -24,9 +24,9 @@ cd Ecommerce-checkout-automation
 mvn clean install
 ```
 ## Test Run:
-To run tests:
+Run all Tests using testng.xml File:
 ```bash
-mvn test
+mvn test -Dsurefire.suiteXmlFiles=testng.xml
 ```
 ## Project Structure
 ```text
@@ -34,6 +34,7 @@ Ecommerce-checkout-automation/
 ├── src/main/java/pages/        # Page Objects and Utilities
 └── src/test/java/              # TestNG test classes
 ├── pom.xml                     # Maven dependencies
+├── testng.xml                  # Defines test groups, suite execution, and configuration
 ├── screenshots                 # Includes Screenshots of successful test results
 ```
 ## Future Improvements:
@@ -72,6 +73,11 @@ Checkout Validation with wrong login creds.
 
 ![Attempting Checkout with incomplete credentials](/screenshots/CheckoutTestWithIncompleteCredentials.png)
 Checkout Validation with incomplete SignUp details.
+
+## Important Note
+The demo site **automationpractice.pl** is not actively maintained and may behave inconsistently at times (e.g., hover menus collapsing too early, AJAX calls not completing).  
+Occasional test failures are due to site instability, not the test logic itself.
+
 
 ![Attempting Checkout Without Adding Address](/screenshots/CheckoutTestWithoutAddress.png)
 Checkout Validation without specifying address.
