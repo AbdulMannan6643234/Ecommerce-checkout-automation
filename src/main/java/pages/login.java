@@ -18,8 +18,9 @@ public class login {
     public void enterPassword(String Passwd){
         driver.findElement(password).sendKeys(Passwd);
     }
-    public void clickSignIn(){
+    public myAccount clickSignIn(){
         driver.findElement(signIn).click();
+        return new myAccount(driver);
     }
     public String getError(){
         return driver.findElement(error).getText();

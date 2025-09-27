@@ -30,6 +30,8 @@ public class payment {
         WebElement Proceed = driver.findElement(proceed);
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("window.scrollBy(0, 250);");
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5) );
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".layer_cart_overlay"))));
         Actions action = new Actions(driver);
         action.moveToElement(Proceed).click().perform();
     }

@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -7,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class createAccount {
     private WebDriver driver;
@@ -28,7 +30,7 @@ public class createAccount {
         this.driver = driver;
     }
     public void setGender(String gender){
-        
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
        
         if(gender.equalsIgnoreCase("male")){
             driver.findElement(Gender1).click();
@@ -72,8 +74,9 @@ public class createAccount {
         if(value == 1){
         driver.findElement(newsLetter).click();
     }}
-    public void submitButton(){
+    public myAccount submitButton(){
         driver.findElement(Submit).click();
+        return new myAccount(driver);
     }
     public List<String> getError(){
         List<WebElement> errors = driver.findElements(errorMessage);

@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class checkout {
     private WebDriver driver;
-    private By proceed = By.cssSelector(".button.btn.btn-default.standard-checkout.button-medium");
+    private By proceed = By.linkText("Proceed to checkout");
     private By address = By.id("address1");
     private By firstNameInput = By.id("firstname");
     private By lastNameInput = By.id("lastname");
@@ -34,13 +34,12 @@ public class checkout {
     public checkout(WebDriver driver){
         this.driver = driver;
     }
-    public login clickproceedtoLogin(){
+    public void clickproceedtoAddress(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(proceed)).perform();
+        wait.until(d->true);
         driver.findElement(proceed).click();
-        return new login(driver);
-    }
-    public SignIn clickproceedToSignIn(){
-        driver.findElement(proceed).click();
-        return new SignIn(driver);
     }
     public void updateAddress(){
         driver.findElement(update).click();
