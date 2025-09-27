@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Ecommerce Suite" parallel="false">
+    <test name="Smoke/Regression Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- Add all test classes here -->
+            <class name="checkoutFlow.checkoutFlowTest"/>
+            <class name="loginFlow.LoginTest"/>
+            <class name="cartFlow.CartTest"/>
+        </classes>
+    </test>
+</suite>
