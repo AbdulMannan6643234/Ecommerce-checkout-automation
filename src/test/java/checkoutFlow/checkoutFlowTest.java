@@ -10,7 +10,7 @@ import Base.BaseTests;
 import utils.WindowManager;
 
 public class checkoutFlowTest extends BaseTests {
-    @Test
+    @Test(groups ={"smoke"})
     public void testSuccessfulCheckoutFlow(){
         var products = homepage.clickProductLink();
        
@@ -29,12 +29,13 @@ public class checkoutFlowTest extends BaseTests {
             selectedProduct = products.selectItem(i);
         }
     }while(true);
-    selectedProduct.AddToCart();
-    var checkout = selectedProduct.clickProceed();
-    var login = checkout.clickproceedtoLogin();
+    selectedProduct.AddToCart("1");
+    var login = selectedProduct.clickProceedToLogin();
     login.enterEmail("johnwick423@gmail.com");
     login.enterPassword("continental");
-    login.clickSignIn();
+    var myacc = login.clickSignIn();
+    var checkout = myacc.moveToCheckOut();
+    checkout.clickproceedtoAddress();
     checkout.proceedToShipping();
     checkout.agreeToTerms();
     var payment = checkout.clickProceedToPayment();
@@ -47,7 +48,7 @@ public class checkoutFlowTest extends BaseTests {
 
     }
 
-    @Test
+    @Test(groups ={"regression"})
     public void testWithWrongCredentials(){
     var products = homepage.clickProductLink();
        
@@ -66,9 +67,9 @@ public class checkoutFlowTest extends BaseTests {
             selectedProduct = products.selectItem(i);
         }
     }while(true);
-    selectedProduct.AddToCart();
-    var checkout = selectedProduct.clickProceed();
-    var login = checkout.clickproceedtoLogin();
+    selectedProduct.AddToCart("1");
+    var login = selectedProduct.clickProceedToLogin();
+    // = checkout.clickproceedtoLogin();
     login.enterEmail("johnwick23@gmail.com");
     login.enterPassword("testPasscode");
     login.clickSignIn();
@@ -77,7 +78,7 @@ public class checkoutFlowTest extends BaseTests {
 
 
 
-    @Test
+    @Test(groups ={"regression"})
     public void testWithIncompleteSignUp(){
         var products = homepage.clickProductLink();
        
@@ -96,17 +97,17 @@ public class checkoutFlowTest extends BaseTests {
             selectedProduct = products.selectItem(i);
         }
     }while(true);
-    selectedProduct.AddToCart();
-    var checkout = selectedProduct.clickProceed();
-    var SignIn = checkout.clickproceedToSignIn();
+    selectedProduct.AddToCart("1");
+    var SignIn = selectedProduct.clickProceedToSignIn();
+    // = checkout.clickproceedToSignIn();
     var create = SignIn.createAccount("testFrameWork@chad.com");
     create.submitButton();
-    assertTrue(checkout.getError().containsAll(Arrays.asList(
+    assertTrue(create.getError().containsAll(Arrays.asList(
 "lastname is required.",
 "firstname is required.",
 "passwd is required.")), "Unexpected Response");
 }
-     @Test
+     @Test(groups ={"regression"})
      public void teestWithIncompleteAddress(){
         var products = homepage.clickProductLink();
        
@@ -125,12 +126,13 @@ public class checkoutFlowTest extends BaseTests {
             selectedProduct = products.selectItem(i);
         }
     }while(true);
-    selectedProduct.AddToCart();
-    var checkout = selectedProduct.clickProceed();
-    var login = checkout.clickproceedtoLogin();
+    selectedProduct.AddToCart("1");
+    var login = selectedProduct.clickProceedToLogin();
+    // = checkout.clickproceedtoLogin();
     login.enterEmail("johnwick423@gmail.com");
     login.enterPassword("continental");
-    login.clickSignIn();
+    var myacc = login.clickSignIn();
+    var checkout = myacc.moveToCheckOut();
     checkout.updateAddress();
     checkout.enterFirstName("##clear##");
     checkout.enterLastName("##clear##");

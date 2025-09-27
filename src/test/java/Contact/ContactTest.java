@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import Base.BaseTests;
 
 public class ContactTest extends BaseTests {
-    @Test
+    @Test(groups = {"smoke"})
     public void successfulMessage(){
         var contact = homepage.clickContactUs();
         contact.selectHeading("Webmaster");
@@ -18,7 +18,7 @@ public class ContactTest extends BaseTests {
         contact.sendMessage();
         assertEquals(contact.getSuccess(), "Your message has been successfully sent to our team.", "Unexpected response");
     }  
-    @Test 
+    @Test(groups ={"regression"}) 
     public void testWithEmptyMessage(){
         var contact = homepage.clickContactUs();
         contact.selectHeading("Webmaster");
@@ -28,7 +28,7 @@ public class ContactTest extends BaseTests {
         contact.sendMessage();
         assertTrue(contact.getError().contains("The message cannot be blank."), "Unexpected Response!");
     }
-    @Test
+    @Test(groups ={"regression"})
     public void testWithoutSubject(){
         var contact = homepage.clickContactUs();
         contact.enterOrderId("0");
