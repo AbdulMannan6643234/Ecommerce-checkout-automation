@@ -74,10 +74,9 @@ Checkout Validation with wrong login creds.
 ![Attempting Checkout with incomplete credentials](/screenshots/CheckoutTestWithIncompleteCredentials.png)
 Checkout Validation with incomplete SignUp details.
 
+![Attempting Checkout Without Adding Address](/screenshots/CheckoutTestWithoutAddress.png)
+Checkout Validation without specifying address.
+
 ## Important Note
 The demo site **automationpractice.pl** is not actively maintained and may behave inconsistently at times (e.g., hover menus collapsing too early, AJAX calls not completing).  
 Occasional test failures are due to site instability, not the test logic itself.
-
-
-![Attempting Checkout Without Adding Address](/screenshots/CheckoutTestWithoutAddress.png)
-Checkout Validation without specifying address.
